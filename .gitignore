@@ -6,3 +6,5 @@ public/templates/
 
 bower_components/
 node_modules/
+
+.sass-cache/
