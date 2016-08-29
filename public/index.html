@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>angular-gulp</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<script src="/js/main.js"></script>
+</head>
+<body id="app">
+	<div ng-controller="ctrlMain as ctrl">
+		<div class="outer-wrapper" ng-init="ctrl.init()">
+		    <section class="table-section">
+		        <header class="table-section-caption">
+		            <div>
+		                <span class="title">Forecasts</span>
+		            </div>
+		            <button type="submit" ng-click="ctrl.openAddDialog()">
+	                    <span>Add new city</span>
+	                </button>
+	                <!--<button type="submit">
+	                    <span>Delete city</span>
+	                </button>
+	                <button type="submit">
+	                    <span>Edit city</span>
+	                </button>
+	                <button type="submit">
+	                    <span>Update data</span>
+	                </button>-->
+		        </header>
+		        <table class="table-data table">
+		            <thead>
+		                <tr>
+		                    <th>Id</th>
+		                    <th>City name</th>
+		                    <th>Temp</th>
+		                    <th>Date of updation</th>		        
+		                    <th>Created at</th>
+		                    <th>Updated at</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		                <tr ng-repeat="item in ctrl.data">
+		                    <td>{{item.id}}</td>
+		                    <td>{{item.name}}</td>
+		                    <td>{{item.main.temp}}</td>
+		                    <td>Date of updation</td>		        
+		                    <td>Created at</td>
+		                    <td>Updated at</td>
+		                </tr>
+		            </tbody>
+		        </table>
+		    </section>
+		</div>
+	</div>
+</body>
+</html>
