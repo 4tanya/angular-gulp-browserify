@@ -1,8 +1,6 @@
 @import "bootstrap";
 @import "font-awesome";
 
-.modal-content {min-height: 100px;}
-.modal-form {padding:20px;}
 @mixin vendor($property, $value) {
     -webkit-#{$property}: $value;
      -khtml-#{$property}: $value;
@@ -110,4 +108,11 @@
 	    	}
 	    }
     }
+}
+
+.modal-content {
+	min-height: 100px;
+	.modal-form {
+		padding:20px;
+	}
 }
