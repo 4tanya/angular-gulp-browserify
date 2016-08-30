@@ -1,0 +1,12 @@
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="ctrl.close(false)">
+	  <span aria-hidden="true">&times;</span>
+	</button>
+	<h4 class="modal-title">Forecasts</h4>
+</div>
+<form class="modal-form" name="form">
+    <label>Enter city name: <input type="text" name="name" ng-model="ctrl.name" /></label>
+    <button type="submit" ng-click="ctrl.close(true)" class="btn btn-info">
+    	{{ctrl.isEditMode?'Edit':'Add'}}
+    </button>   
+</form>
