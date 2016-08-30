@@ -5,8 +5,9 @@
 	<h4 class="modal-title">Forecasts</h4>
 </div>
 <form class="modal-form" name="form">
-    <label>Enter city name: <input type="text" name="name" ng-model="ctrl.name" /></label>
+    <label>Enter city name: <input type="text" name="name" ng-model="ctrl.name" ng-pattern="/^[A-Za-zА-Яа-яЁё\s\-]*$/" /></label>
     <button type="submit" ng-click="ctrl.close(true)" class="btn btn-info">
     	{{ctrl.isEditMode?'Edit':'Add'}}
-    </button>   
+    </button> 
+    <p ng-show="form.name.$error.pattern">Only letters, space and hyphen are allowed.</p>  
 </form>
