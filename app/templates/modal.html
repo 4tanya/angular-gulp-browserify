@@ -6,7 +6,7 @@
 </div>
 <form class="modal-form" name="form">
     <label>Enter city name: <input type="text" name="name" ng-model="ctrl.name" ng-pattern="/^[A-Za-zА-Яа-яЁё\s\-]*$/" /></label>
-    <button type="submit" ng-click="ctrl.close(true)" class="btn btn-info">
+    <button type="submit" ng-click="ctrl.close(true)" ng-disabled="form.name.$error.pattern" class="btn btn-info">
     	{{ctrl.isEditMode?'Edit':'Add'}}
     </button> 
     <p ng-show="form.name.$error.pattern" class="color-danger">Only letters, space and hyphen are allowed.</p>  
